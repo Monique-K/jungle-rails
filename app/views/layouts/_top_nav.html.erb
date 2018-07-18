@@ -25,6 +25,16 @@
             <% end %>
           </ul>
         </li>
+        <li id="log-in-out" class="navbar-link">
+          <% if current_user %>
+            <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %>
+            <li class="navbar-link">
+            <%= link_to 'Register', '/signup' %>
+          </li>
+          <% end %>
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
        <li class="dropdown">
@@ -46,5 +56,4 @@
         </li>
       </ul>
     </div>
-  </div>
 </nav>
