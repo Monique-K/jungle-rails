@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Thanks for ordering from Jungle!</h1>
+    <p>
+      Your order has been received, and will be delivered shortly. Your oder number is: <%= @order.id %>.<br>
+    </p>
+      <h2>Order Overview:</h2>
+    <p>
+      Total: <%= humanized_money_with_symbol Money.new(@order.total_cents) %>
+    </p>
+    <p>Thanks for your purchase, and have a great day!</p>
+  </body>
+</html>
