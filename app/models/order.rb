@@ -9,7 +9,6 @@ class Order < ActiveRecord::Base
   after_create :send_receipt
 
   def send_receipt
-
     OrderMailer.receipt_email(self).deliver_now
     puts "----------SENT EMAIL RECEIPT------------------"
   end
