@@ -28,7 +28,16 @@
 
   </article>
 
-  <h1>Average Rating: <% @average_rating.times do %><span class="fa fa-star checked"></span><% end %></h1>
+  <h1>Average Rating:
+    <% if @average_rating %>
+        <% @average_rating.times do %>
+        <span class="fa fa-star checked"></span>
+        <% end %>
+    <% else %>
+        No ratings yet!
+      <% end %>
+  </h1>
+
   <% if current_user %>
   <div>
    <%= form_for [@product, @review] do |form| %>
@@ -50,18 +59,21 @@
 
 <br/>
   <div >
-    <table>
+    <table class="reviews-table">
     <thead>
       <tr>
       <th>Reviews</th>
-      <th>Rating</th>
+      <th></th>
       </tr>
     </thead>
     <tbody>
+    <tr></tr>
     <% @product.reviews.reverse.each do |review| %>
     <tr>
-      <td><%= review.description %></td>
-      <td><% review.rating.times do %><span class="fa fa-star checked"></span><% end %></td>
+      <td><%= review.description %>
+        <br>
+        <% review.rating.times do %><span class="fa fa-star checked"></span><% end %>
+      </td>
       <td>
         <% if review.user.id == current_user.id %>
         <%= link_to "Delete", [@product, review], class: "btn btn-danger", method: :delete  %>

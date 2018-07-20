@@ -1,6 +1,6 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+A mini e-commerce application built with Rails 4.2
 
 
 ## Setup
@@ -17,9 +17,23 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Stripe Testing
 
-Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
+Use Credit Card # 4111 1111 1111 1111 for testing success scenarios. The expiry date can be any future date, and the security code can  be any 3 digits.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Using Jungle
+
+Jungle is a hipster's shopping dream! We have a wide variety of useless kitchy items at ridiculous prices.
+
+![Products index page](https://github.com/)
+
+Each product has an info page containing the average rating, and user reviews. Users can delete their own reviews if they are logged in.
+
+![Individual product page](https://github.com/)
+
+Add items to your cart, and check out using Stripe.
+
+![Cart](https://github.com/)
 
 ## Dependencies
 
