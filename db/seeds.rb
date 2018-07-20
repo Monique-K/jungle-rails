@@ -21,6 +21,17 @@ end
 
 # Let's do this ...
 
+
+## USERS
+
+puts "Re-creating Users ..."
+
+User.create!({
+ name: "Salty_Reviewer",
+ email: "cranky@example.com",
+ password_digest: "jsddfliadjigjsd"
+})
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
@@ -132,5 +143,53 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+
+## REVIEWS
+
+puts "Finding or Creating Products ..."
+
+prod1 = Product.find_or_create_by! id: 1
+prod2 = Product.find_or_create_by! id: 2
+prod3 = Product.find_or_create_by! id: 3
+
+puts "Re-creating Reviews ..."
+
+Review.destroy_all
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 4
+})
+
+prod2.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 2
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 1
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 5
+})
+
+prod1.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 4
+})
+
+prod2.reviews.create!({
+  user_id: 1,
+  description: Faker::Hipster.paragraph(1),
+  rating: 3
+})
 
 puts "DONE!"
