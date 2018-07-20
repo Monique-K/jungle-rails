@@ -23,7 +23,7 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Using Jungle
 
-Jungle is a hipster's shopping dream! We have a wide variety of useless kitchy items at ridiculous prices.
+Jungle is a hipster's shopping dream! Enjoy browsing our wide variety of useless kitchy items at ridiculous prices.
 
 ![Products index page](https://github.com/Monique-K/jungle-rails/tree/master/public/readme-images/products-page.png)
 
@@ -33,7 +33,7 @@ Each product has an info page containing the average rating, and user reviews. U
 
 Add items to your cart, and check out using Stripe.
 
-![Cart](https://github.com/Monique-K/jungle-rails/tree/master/public/readme-images/cart.png)
+![Cart](https://github.com/Monique-K/jungle-rails/blob/master/public/readme-images/cart.png)
 
 ## Dependencies
 
