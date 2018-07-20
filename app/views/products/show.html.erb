@@ -46,7 +46,7 @@
   <% end %>
 
   </div>
-
+  <h1>Average Rating: <%= @average_rating %>/5</h1>
 
 <br/>
   <div >
@@ -58,13 +58,13 @@
       </tr>
     </thead>
     <tbody>
-    <% @product.reviews.each do |review| %>
+    <% @product.reviews.reverse.each do |review| %>
     <tr>
       <td><%= review.description %></td>
       <td><%= review.rating%>/5</td>
       <td>
         <% if review.user.id == current_user.id %>
-        <%= link_to "Delete", [@product, review], method: :delete %>
+        <div class="delete-button"><%= link_to "Delete", [@product, review], method: :delete %></div>
         <% end %>
       </td>
     </tr>
