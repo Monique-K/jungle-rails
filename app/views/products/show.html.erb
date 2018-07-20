@@ -28,6 +28,7 @@
 
   </article>
 
+  <% if current_user %>
   <div>
    <%= form_for [@product, @review] do |form| %>
 
@@ -42,11 +43,13 @@
         </div>
 
         <%= form.submit 'Submit Review', class: 'btn btn-primary' %>
-      <% end %>
+  <% end %>
+
   </div>
 
 
-  <div class="table table-bordered">
+<br/>
+  <div >
     <table>
     <thead>
       <tr>
@@ -57,13 +60,18 @@
     <tbody>
     <% @product.reviews.each do |review| %>
     <tr>
-      <td><%= review.description %> <em></em></td>
+      <td><%= review.description %></td>
       <td><%= review.rating%>/5</td>
+      <td>
+        <% if review.user.id == current_user.id %>
+        <%= link_to "Delete", [@product, review], method: :delete %>
+        <% end %>
+      </td>
     </tr>
+       <% end %>
     <% end %>
   </tbody>
 </table>
-
   </div>
 
 </section>
