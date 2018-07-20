@@ -27,11 +27,11 @@ Jungle is a hipster's shopping dream! Enjoy browsing our wide variety of useless
 
 ![Products index page](https://github.com/Monique-K/jungle-rails/blob/master/public/readme-images/products-page.png)
 
-Each product has an info page containing the average rating, and user reviews. Users can delete their own reviews if they are logged in.
+Each product has an info page containing the average rating and user reviews. Logged in users can delete their own reviews using the handy red buttons.
 
 ![Individual product page](https://github.com/Monique-K/jungle-rails/blob/master/public/readme-images/product-reviews.png)
 
-Add items to your cart, and check out using Stripe.
+Click on the cart icon to see a preview of your order. Here you can add or remove items and check out using Stripe when you're ready.
 
 ![Cart](https://github.com/Monique-K/jungle-rails/blob/master/public/readme-images/cart.png)
 
