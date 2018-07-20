@@ -25,15 +25,15 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 Jungle is a hipster's shopping dream! We have a wide variety of useless kitchy items at ridiculous prices.
 
-![Products index page](https://github.com/)
+![Products index page](https://github.com/Monique-K/jungle-rails/tree/master/public/readme-images/products-page.png)
 
 Each product has an info page containing the average rating, and user reviews. Users can delete their own reviews if they are logged in.
 
-![Individual product page](https://github.com/)
+![Individual product page](https://github.com/Monique-K/jungle-rails/tree/master/public/readme-images/product-reviews.png)
 
 Add items to your cart, and check out using Stripe.
 
-![Cart](https://github.com/)
+![Cart](https://github.com/Monique-K/jungle-rails/tree/master/public/readme-images/cart.png)
 
 ## Dependencies
 
